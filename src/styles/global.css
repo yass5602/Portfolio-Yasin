@@ -1,0 +1,131 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  h2 {
+    font-family: Montserrat, bold;
+  }
+
+  header,
+  footer {
+    background-color: #222;
+    color: white;
+    padding: 1rem;
+  }
+  
+  /* Styles pour le header fixé en haut */
+  header {
+    position: fixed; /* Position fixe en haut */
+    top: 0; /* Collé en haut */
+    left: 0; /* Depuis la gauche */
+    right: 0; /* Jusqu'à la droite */
+    width: 100%; /* Largeur complète */
+    background-color: #222;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Logo à gauche */
+    z-index: 1000; /* Au-dessus du contenu */
+  }
+
+  /* Styles pour le logo dans le header */
+  header img {
+    height: 40px; /* Hauteur fixe pour s'adapter à la navbar */
+    width: auto; /* Largeur automatique pour garder les proportions */
+    vertical-align: middle; /* Alignement vertical avec la navigation */
+  }
+
+  /* Ajustement de la navigation pour qu'elle soit centrée */
+  nav {
+    position: absolute; /* Position absolue pour centrer indépendamment du logo */
+    left: 50%; /* Centre horizontalement */
+    transform: translateX(-50%); /* Décalage pour un centrage parfait */
+  }
+  
+  /* Ajustement de la liste de navigation pour l'aligner au centre */
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* Centré */
+  }
+  
+  nav ul li {
+    display: inline;
+    font-family: Montserrat, bold;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none; /* Optionnel : retire le soulignement */
+    font-weight: 500;      /* Optionnel : un peu plus épais */
+    transition: color 0.2s;
+  }
+  
+  nav ul li a:hover {
+    color: #ffd700; /* Optionnel : couleur dorée au survol */
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 1rem;
+    padding-top: 100px; /* Espace pour le header fixé */
+    padding-bottom: 80px; /* Espace pour le footer */
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .card:hover{
+    box-shadow: 5px 5px 10px #222;
+  }
+  .card img {
+    max-width: 100%;
+    height: 35%;
+    border-radius: 4px;
+    object-fit:contain;
+  }
+  .card a {
+    color: #222;
+    font-family: Montserrat;
+    text-decoration: none; /* Optionnel : retire le soulignement */
+    font-weight: 500;      /* Optionnel : un peu plus épais */
+    transition: color 0.2s;
+  }
+  .card h3 {
+    font-family: Montserrat, bold;
+  }
+  .card a:hover{
+    color: #ffd700;
+  }
+
+  .card p, ul{
+    font-family: Roboto Condensed;
+  }
+  
+  /* Styles pour le footer en bas absolu */
+  footer {
+    position: fixed; /* Position fixe en bas */
+    bottom: 0; /* Collé au bas de la page */
+    left: 0; /* Depuis la gauche */
+    right: 0; /* Jusqu'à la droite */
+    width: 100%; /* Largeur complète */
+    z-index: 1000; /* Au-dessus du contenu */
+  }
+  

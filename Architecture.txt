@@ -1,0 +1,22 @@
+/src
+│
+├── main.jsx                 # Point d’entrée principal de l’app (ReactDOM + router)
+├── router.jsx               # Configuration des routes avec react-router-dom
+├── App.jsx                  # Layout général (Header + Footer + Outlet)
+│
+├── /pages                   # Pages associées aux routes
+│   ├── Home.jsx             # Page d'accueil
+│   ├── Projects.jsx         # Liste des projets (via ProjectCard)
+│   ├── About.jsx            # Présentation personnelle
+│   └── Contact.jsx          # Coordonnées de contact
+│
+├── /components              # Composants réutilisables
+│   ├── Header.jsx           # Barre de navigation
+│   ├── Footer.jsx           # Pied de page
+│   └── ProjectCard.jsx      # Carte d’affichage d’un projet
+│
+├── /data
+│   └── projectList.js       # Données simulées des projets (id, titre, image, etc.)
+│
+└── /styles
+    └── globals.css          # Styles CSS globaux (layout, responsive, etc.)
