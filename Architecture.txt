@@ -4,6 +4,8 @@
 ├── router.jsx               # Configuration des routes avec react-router-dom
 ├── App.jsx                  # Layout général (Header + Footer + Outlet)
 │
+├── /images
+|
 ├── /pages                   # Pages associées aux routes
 │   ├── Home.jsx             # Page d'accueil
 │   ├── Projects.jsx         # Liste des projets (via ProjectCard)
