@@ -1,12 +1,12 @@
 // router.jsx
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
-export const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
@@ -18,3 +18,7 @@ export const router = createBrowserRouter([
     ],
   },
 ]);
+
+export function AppRouter() {
+    return <RouterProvider router={router} />
+}
