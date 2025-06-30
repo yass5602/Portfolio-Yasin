@@ -1,7 +1,7 @@
-import Logo from '../images/Logo.png';
-import Logo2 from '../images/Sophie_Bluel.png'
-import Logo3 from '../images/Booki.png'
-import Logo4 from '../images/logo-kasa-accueil.png'
+import Logo from '../images/Mon-Vieux-Grimoire.svg';
+import Logo2 from '../images/Sophie-Bluel.svg'
+import Logo3 from '../images/Booki.svg'
+import Logo4 from '../images/LOGO.svg'
 
 export const projects = [
     {
