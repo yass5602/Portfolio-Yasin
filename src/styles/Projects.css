@@ -1,0 +1,12 @@
+/* Styles spécifiques à la page Projets */
+
+/* Les styles principaux sont déjà dans global.css, mais on peut ajouter des styles spécifiques ici si besoin. */
+
+.projects-section h2 {
+  font-size: 1.5rem;
+  color: #007bff;
+}
+
+.projects-section {
+  margin-bottom: 2rem;
+} 

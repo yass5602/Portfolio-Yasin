@@ -1,3 +1,4 @@
+import '../styles/Projects.css';
 import { projects } from '../data/projectList';
 import { videoProjects } from '../data/videoProjects';
 import ProjectCard from '../components/ProjectCard';

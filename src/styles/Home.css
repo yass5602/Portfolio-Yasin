@@ -1,0 +1,46 @@
+/* Styles spécifiques à la page d'accueil (Home) */
+
+.home-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+}
+
+.home-text-container {
+  flex: 1.2;
+  max-width: 600px;
+}
+
+.home-image-container {
+  flex: 0.8;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-profile-image {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.home-title {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+  line-height: 1.2;
+}
+
+.home-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1rem;
+} 

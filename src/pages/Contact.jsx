@@ -1,3 +1,5 @@
+import '../styles/Contact.css';
+
 export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -7,80 +9,33 @@ export default function Contact() {
   };
 
   return (
-    <section style={{ 
-      padding: '2rem',
-      maxWidth: '600px',
-      margin: '0 auto'
-    }}>
-      <h2 style={{
-        textAlign: 'center',
-        marginBottom: '2rem',
-        color: '#333'
-      }}>Contact</h2>
+    <section className="contact-section">
+      <h2 className="contact-title">Contact</h2>
 
-      <form onSubmit={handleSubmit} style={{
-        display: 'flex',
-        flexDirection: 'column',
-        gap: '1rem'
-      }}>
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '0.5rem'
-        }}>
-          <label htmlFor="subject" style={{
-            fontWeight: 'bold',
-            color: '#555'
-          }}>Objet :</label>
+      <form onSubmit={handleSubmit} className="contact-form">
+        <div className="contact-form-group">
+          <label htmlFor="subject" className="contact-label">Objet :</label>
           <input
             type="text"
             id="subject"
             name="subject"
             required
-            style={{
-              padding: '0.8rem',
-              borderRadius: '4px',
-              border: '1px solid #ddd',
-              fontSize: '1rem'
-            }}
+            className="contact-input"
           />
         </div>
 
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '0.5rem'
-        }}>
-          <label htmlFor="message" style={{
-            fontWeight: 'bold',
-            color: '#555'
-          }}>Message :</label>
+        <div className="contact-form-group">
+          <label htmlFor="message" className="contact-label">Message :</label>
           <textarea
             id="message"
             name="message"
             required
             rows="6"
-            style={{
-              padding: '0.8rem',
-              borderRadius: '4px',
-              border: '1px solid #ddd',
-              fontSize: '1rem',
-              resize: 'vertical'
-            }}
+            className="contact-textarea"
           />
         </div>
 
-        <button type="submit" style={{
-          padding: '1rem 2rem',
-          backgroundColor: '#007bff',
-          color: 'white',
-          border: 'none',
-          borderRadius: '4px',
-          fontSize: '1rem',
-          cursor: 'pointer',
-          transition: 'background-color 0.2s',
-          marginTop: '1rem'
-        }}>
+        <button type="submit" className="contact-button">
           Envoyer
         </button>
       </form>
