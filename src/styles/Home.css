@@ -43,4 +43,37 @@
   line-height: 1.8;
   color: #555;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .home-section {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 3rem 1rem;
+  }
+  .home-text-container, .home-image-container {
+    max-width: 100%;
+    flex: unset;
+  }
+  .home-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-section {
+    padding: 2rem 0.5rem;
+    gap: 1.2rem;
+  }
+  .home-title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+  .home-description {
+    font-size: 0.98rem;
+  }
+  .home-profile-image {
+    max-width: 180px;
+    height: auto;
+  }
 } 
