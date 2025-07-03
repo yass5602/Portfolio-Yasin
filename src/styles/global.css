@@ -314,5 +314,161 @@ footer {
     font-size: 0.7rem;
     padding: 0.1rem 0.4rem;
   }
+  .nav-links {
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links ul li {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0.4rem;
+    position: relative;
+  }
+  .navbar-logo-container {
+    margin-right: auto;
+  }
+  .burger {
+    margin-left: 0;
+  }
+}
+
+/* === Navbar Burger Styles === */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem 2rem;
+  background-color: #222;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  height: 40px;
+}
+.navbar-logo-container {
+  margin-right: auto;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.burger span {
+  display: block;
+  height: 4px;
+  width: 100%;
+  background: #fff;
+  margin: 5px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+.burger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+.burger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  transition: right 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.4rem;
+    position: relative;
+  }
+  .burger {
+    margin-left: auto;
+  }
+  .burger {
+    display: flex;
+  }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    height: 100vh;
+    width: 70vw;
+    max-width: 320px;
+    background: #222;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.3s;
+    z-index: 1050;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+  }
+  .nav-links.open {
+    display: flex;
+    right: 0;
+  }
+  .nav-links ul {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .nav-links ul li {
+    font-size: 1.3rem;
+  }
+}
+
+/* Pour éviter le scroll horizontal quand le menu est ouvert */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Overlay pour menu burger */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  z-index: 1040;
+  animation: fadeInOverlay 0.3s;
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
   
