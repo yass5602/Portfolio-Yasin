@@ -1,8 +1,9 @@
 /* Styles spécifiques à la page Contact */
 
 .contact-section {
-  padding: 2rem;
-  max-width: 600px;
+  padding: 2.5rem 1rem;
+  max-width: 750px;
+  min-width: 320px;
   margin: 0 auto;
 }
 
@@ -15,7 +16,7 @@
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .contact-form-group {
@@ -31,13 +32,14 @@
 
 .contact-input,
 .contact-textarea {
-  padding: 0.8rem;
+  padding: 1.1rem;
   border-radius: 4px;
   border: 1px solid #ddd;
-  font-size: 1rem;
+  font-size: 1.15rem;
 }
 
 .contact-textarea {
+  min-height: 180px;
   resize: vertical;
 }
 
@@ -61,9 +63,18 @@
   .contact-section {
     padding: 1.2rem;
     max-width: 98vw;
+    min-width: unset;
   }
   .contact-title {
     font-size: 1.4rem;
+  }
+  .contact-input,
+  .contact-textarea {
+    font-size: 1.05rem;
+    padding: 0.8rem;
+  }
+  .contact-textarea {
+    min-height: 120px;
   }
 }
 
@@ -79,7 +90,10 @@
   .contact-input,
   .contact-textarea {
     font-size: 0.98rem;
-    padding: 0.5rem;
+    padding: 0.6rem;
+  }
+  .contact-textarea {
+    min-height: 80px;
   }
   .contact-button {
     font-size: 0.98rem;

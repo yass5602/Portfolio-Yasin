@@ -1,9 +1,15 @@
+html, body {
+  height: 100%;
+}
 body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #f4f7f9;
-    color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f4f7f9;
+  color: #333;
 }
 
 h2 {
@@ -77,11 +83,13 @@ nav ul li a:hover {
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position: static;
     width: 100%;
+    background-color: #222;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: auto;
     z-index: 1000;
 }
 
@@ -215,26 +223,14 @@ footer {
 }
 
 @media (max-width: 1024px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.7rem;
+  .projects-section h2 {
+    font-size: 1.2rem;
   }
-  nav {
-    position: static;
-    transform: none;
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-  .container {
-    padding-top: 80px;
-    padding-bottom: 60px;
-  }
-  .projects-vertical-sections {
-    padding: 1rem 0;
-    gap: 1.5rem;
+  .projects-section {
+    padding: 1rem 0.5rem;
   }
   .grid {
+    grid-template-columns: 1fr;
     gap: 0.7rem;
   }
   .card {
@@ -245,58 +241,14 @@ footer {
 }
 
 @media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0.4rem;
-    position: relative;
-  }
-  nav {
-    position: static;
-    width: 100%;
-    background: none;
-    box-shadow: none;
-    height: auto;
-    transform: none;
-    transition: none;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding-top: 0;
-  }
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
-    padding-left: 0;
-    margin-top: 0.5rem;
-    width: 100%;
-  }
-  nav ul li {
-    font-size: 1.1rem;
-    width: 100%;
-  }
-  nav ul li a {
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 0.7rem 0;
-    display: block;
-    width: 100%;
-  }
-  .container {
-    padding: 0.5rem;
-    padding-top: 60px;
-    padding-bottom: 40px;
-  }
-  .projects-vertical-sections {
-    padding: 0.5rem 0;
-    gap: 1rem;
+  .projects-section h2 {
+    font-size: 1rem;
   }
   .projects-section {
+    margin-bottom: 1rem;
     padding: 0.5rem 0.2rem;
   }
   .grid {
-    grid-template-columns: 1fr;
     gap: 0.5rem;
   }
   .card {
@@ -313,40 +265,6 @@ footer {
   .skills-list li {
     font-size: 0.7rem;
     padding: 0.1rem 0.4rem;
-  }
-  .nav-links {
-    justify-content: center;
-    align-items: center;
-  }
-  .nav-links ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-  }
-  .nav-links ul li {
-    width: 100%;
-    text-align: center;
-    font-size: 1.3rem;
-  }
-  .navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0.4rem;
-    position: relative;
-  }
-  .navbar-logo-container {
-    margin-right: auto;
-  }
-  .burger {
-    margin-left: 0;
   }
 }
 
@@ -470,5 +388,11 @@ body.menu-open {
 @keyframes fadeInOverlay {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+#root {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
   
